@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welcome to My Flask App!</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f3f4f7;
+    }
+    .container {
+      text-align: center;
+      margin: 50px auto;
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2196F3;
+      margin-bottom: 10px;
+    }
+    .success-message {
+      font-size: 1.2em;
+      color: #4CAF50;
+      margin-bottom: 20px;
+    }
+    .fun-text {
+      font-size: 1em;
+      color: #555;
+      animation: pop-in 0.8s ease-in-out infinite alternate;
+    }
+    @keyframes pop-in {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+    }
+    a {
+      display: inline-block;
+      background: #2196F3;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      transition: background 0.2s ease-in-out;
+      margin-top: 20px;
+    }
+    a:hover {
+      background: #1769aa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Display the logged-in user's name -->
+    <h1>Welcome, {{ username }}!</h1>
+
+    <!-- A success message or any status text -->
+    <p class="success-message">You have successfully logged in!</p>
+
+    <!-- A fun, animated text encouraging the user -->
+    <p class="fun-text">
+      We’re excited to see what you’ll explore next!
+    </p>
+
+    <!-- A sample button or link to guide the user further -->
+    <a href="{{ url_for('index') }}">Create a new post</a>
+  </div>
+</body>
+</html>
